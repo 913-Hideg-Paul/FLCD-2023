@@ -102,7 +102,7 @@ StrExpr -> Identifier
 IntConstant -> Sign PositiveNumber
 IntConstant -> 0
 Sign -> +
-Sign -> - 
+Sign -> -
 Sign -> epsilon
 PositiveNumber -> NonZeroDigit RestOfNumber
 RestOfNumber -> Digit RestOfNumber
@@ -131,11 +131,11 @@ BoolExpr -> BoolExpr LogicalOperator BoolExpr
 BoolExpr -> ( BoolExpr LogicalOperator BoolExpr )
 LogicalOperator -> and
 LogicalOperator -> or
-ArrStatement -> Identifier = ArrContent 
+ArrStatement -> Identifier = ArrContent
 ArrContent -> epsilon
-ArrContent -> [ IntContentArr ] 
+ArrContent -> [ IntContentArr ]
 ArrContent -> [ StrContentArr ]
-IntContentArr -> epsilon 
+IntContentArr -> epsilon
 IntContentArr -> IntExpr
 IntContentArr -> IntExpr , IntContentArr
 StrContentArr -> epsilon
@@ -154,7 +154,7 @@ WhileStatement -> while ( Condition ) Statement
 WhileStatement -> while ( Condition ) CompoundStatement
 FunctionCallStatement -> <-- ( Identifier )
 FunctionCallStatement -> --> ( PrintCallArgument )
-FunctionCallStatement -> len ( StrExpr ) 
+FunctionCallStatement -> len ( StrExpr )
 PrintCallArgument -> Identifier
 PrintCallArgument -> Expression
 ForStatement -> for VarStatement | Condition | VarStatement
